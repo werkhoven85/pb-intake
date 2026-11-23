@@ -150,27 +150,34 @@ window.PB_MODULES.push({
    "id": "ob3",
    "title": "Onboardingprofielen",
    "short": "Profielen",
-   "intro": "Een onboardingprofiel bepaalt welke workflow, welk draaiboek en welke toegang een nieuwe medewerker krijgt. AFAS levert standaardprofielen mee die je als basis gebruikt.",
+   "intro": "Een onboardingprofiel bepaalt welke workflow, welk draaiboek en welke toegang een nieuwe medewerker krijgt, en welke gegevens er gevraagd worden. AFAS levert standaardprofielen mee die je als basis gebruikt.",
    "qs": [
     {
-     "id": "aantal",
-     "t": "choice",
-     "l": "Hoeveel onboardingprofielen verwachten jullie nodig te hebben?",
+     "id": "soorten",
+     "t": "multi",
+     "l": "Voor welke soorten medewerkers willen jullie een eigen onboardingprofiel?",
      "o": [
-      "Eén voor iedereen",
-      "Per werkgever",
-      "Per doelgroep of cao",
-      "Weet ik nog niet"
+      "Vaste medewerker",
+      "Oproepkracht",
+      "Stagiair",
+      "Leerling (BBL)",
+      "Externe medewerker"
      ],
-     "a": "Eén voor iedereen",
-     "at": "Begin met één profiel en voeg alleen profielen toe als de stappen echt verschillen, bijvoorbeeld een andere workflow of ander draaiboek.",
+     "a": [
+      "Vaste medewerker",
+      "Oproepkracht",
+      "Stagiair",
+      "Leerling (BBL)",
+      "Externe medewerker"
+     ],
+     "at": "Maak per soort medewerker een eigen profiel. Elk profiel vraagt dan alleen de gegevens die voor die groep nodig zijn, met passende standaardwaarden. Met één profiel voor iedereen moet de invuller telkens te veel gegevens invullen of aanpassen.",
      "link": "135008.htm"
     },
     {
      "id": "doelgr",
      "t": "area",
-     "l": "Welke doelgroepen hebben een duidelijk andere indiensttreding?",
-     "h": "Bijvoorbeeld stagiairs, oproepkrachten, BBL-leerlingen of medewerkers bij een andere werkgever.",
+     "l": "Zijn er nog andere groepen met een duidelijk andere indiensttreding?",
+     "h": "Bijvoorbeeld uitzendkrachten, vrijwilligers of medewerkers bij een andere werkgever binnen de groep.",
      "opt": true
     },
     {
