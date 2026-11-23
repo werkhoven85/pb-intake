@@ -164,7 +164,7 @@ window.PB_MODULES.push({
       "Geen vaste termijn"
      ],
      "a": "2 werkdagen",
-     "at": "Een vaste termijn houdt de aanvraag in beweging; met een signaal herinnert AFAS de beoordelaar."
+     "at": "Een vaste termijn houdt de aanvraag in beweging. AFAS heeft hiervoor geen standaardsignaal; een herinnering vraagt een eigen signaal."
     },
     {
      "id": "velden",
@@ -288,7 +288,7 @@ window.PB_MODULES.push({
      ],
      "a": "Twee tot drie",
      "at": "Maak een profiel per functiegroep met echt andere velden, niet per functie. Dat blijft beheersbaar.",
-     "link": "130031.htm"
+     "link": "133958.htm"
     },
     {
      "id": "opbouw",
@@ -314,8 +314,7 @@ window.PB_MODULES.push({
       "Sollicitatieprocedure",
       "Contactpersoon"
      ],
-     "at": "Gebruik één vaste opbouw in het documentsjabloon. Kandidaten vergelijken vacatures makkelijker en de aanvrager weet wat er gevraagd wordt.",
-     "link": "Ins_Ess_Rcruit_DocTemp.htm"
+     "at": "Gebruik één vaste opbouw voor elke vacaturetekst. Kandidaten vergelijken vacatures makkelijker en de aanvrager weet wat er gevraagd wordt."
     },
     {
      "id": "salaris",
@@ -331,9 +330,9 @@ window.PB_MODULES.push({
     },
     {
      "id": "standaard",
-     "t": "advies",
-     "l": "Vaste standaardteksten",
-     "at": "Leg de blokken 'Over ons' en 'Wat bieden wij' centraal vast in het sjabloon, zodat ze niet per vacature opnieuw geschreven worden en altijd actueel zijn."
+     "t": "text",
+     "l": "Wie beheert de vaste teksten, zoals “Over ons” en “Wat bieden wij”?",
+     "h": "Vaste teksten die in elke vacature terugkomen, wil je op één plek actueel houden."
     },
     {
      "id": "schrijver",
@@ -415,7 +414,7 @@ window.PB_MODULES.push({
      "id": "insite",
      "t": "advies",
      "l": "Interne vacatures op InSite",
-     "at": "Toon alle vacatures ook op InSite, zodat medewerkers intern kunnen solliciteren en vacatures kunnen doorsturen.",
+     "at": "Toon alle vacatures ook op InSite, zodat medewerkers intern kunnen solliciteren.",
      "link": "130034.htm"
     },
     {
@@ -427,7 +426,7 @@ window.PB_MODULES.push({
       "Nee"
      ],
      "a": "Ja",
-     "at": "Google for Jobs is gratis en zet je per OutSite aan. Het levert extra bereik zonder extra werk.",
+     "at": "Google for Jobs zet je per OutSite aan. Het levert extra bereik zonder extra werk.",
      "link": "135381.htm"
     },
     {
@@ -500,7 +499,7 @@ window.PB_MODULES.push({
    "id": "s4",
    "title": "Werken-bij-pagina: opmaak en inhoud",
    "short": "Werken-bij",
-   "intro": "De werken-bij-pagina is een OutSite. Kleuren, lettertypen, menu, banners en knoppen stel je in met de thema-editor; het logo via de sitestijl.",
+   "intro": "De werken-bij-pagina is een OutSite. Kleuren, lettertypen, menu, banners en knoppen stel je in met de thema-editor.",
    "qs": [
     {
      "id": "site",
@@ -546,9 +545,7 @@ window.PB_MODULES.push({
     {
      "id": "logo",
      "t": "upload",
-     "l": "Upload jullie logo (bij voorkeur SVG of PNG met transparante achtergrond)",
-     "link": "Ins_Site_Style.htm",
-     "lt": "Logo via sitestijl"
+     "l": "Upload jullie logo (bij voorkeur SVG of PNG met transparante achtergrond)"
     },
     {
      "id": "huisstijl",
@@ -594,8 +591,9 @@ window.PB_MODULES.push({
      "id": "toegankelijk",
      "t": "advies",
      "l": "Digitale toegankelijkheid",
-     "at": "Kies kleuren met voldoende contrast en geef afbeeldingen een beschrijving. AFAS geeft hier aandachtspunten voor bij het inrichten van thema's.",
-     "link": "Ins_Theme.htm"
+     "at": "Kies kleuren met voldoende contrast en geef afbeeldingen een beschrijving, zodat de pagina voor iedereen bruikbaar is.",
+     "link": "Ins_Theme.htm",
+     "lt": "Thema’s in AFAS"
     },
     {
      "id": "vindbaar",
@@ -733,19 +731,19 @@ window.PB_MODULES.push({
       "10 werkdagen"
      ],
      "a": "5 werkdagen",
-     "at": "Een vaste reactietermijn houdt kandidaten betrokken. Een signaal in AFAS bewaakt de termijn."
+     "at": "Een vaste reactietermijn houdt kandidaten betrokken. AFAS bewaakt deze termijn niet standaard; dat vraagt een eigen signaal of een vaste werkafspraak."
     },
     {
      "id": "interne",
      "t": "choice",
-     "l": "Krijgen interne sollicitanten een eigen route?",
+     "l": "Moet de huidige leidinggevende geïnformeerd worden als een medewerker intern solliciteert?",
      "o": [
-      "Ja, aparte workflow voor medewerkers",
-      "Nee, zelfde route als extern"
+      "Ja",
+      "Nee",
+      "Weet nog niet"
      ],
-     "a": "Ja, aparte workflow voor medewerkers",
-     "at": "Medewerkers solliciteren via InSite. Een eigen workflow maakt het mogelijk de huidige leidinggevende te informeren.",
-     "link": "130034.htm"
+     "link": "130034.htm",
+     "h": "Medewerkers solliciteren via InSite. AFAS levert hiervoor geen aparte standaardworkflow mee; een eigen route richten we zelf in."
     },
     {
      "id": "checks",
@@ -773,15 +771,15 @@ window.PB_MODULES.push({
      "id": "ai",
      "t": "choice",
      "l": "Hebben jullie interesse in AI-matching van cv's en vacatures?",
-     "h": "AFAS kan cv's analyseren en sollicitanten en medewerkers matchen met vacatures. Dit vereist dat AFAS AI (Jonas) aanstaat.",
+     "h": "AFAS kan cv’s analyseren en sollicitanten en medewerkers matchen met vacatures. Dit vraagt een aparte activering.",
      "o": [
       "Ja, graag meer informatie",
       "Nee",
       "Weet nog niet"
      ],
      "opt": true,
-     "link": "140214.htm",
-     "lt": "Over AI-matching"
+     "link": "140215.htm",
+     "lt": "Inrichting AI-matching"
     }
    ]
   },
@@ -857,15 +855,9 @@ window.PB_MODULES.push({
     },
     {
      "id": "schaal",
-     "t": "choice",
-     "l": "Welke score willen jullie gebruiken?",
-     "h": "We stemmen dit in de inrichting af op de mogelijkheden van het veld Beoordeling in AFAS.",
-     "o": [
-      "Cijfer 1 tot 5",
-      "Cijfer 1 tot 10",
-      "Onvoldoende / voldoende / goed",
-      "Nog geen voorkeur"
-     ]
+     "t": "area",
+     "l": "Hoe willen jullie kandidaten scoren?",
+     "h": "Bijvoorbeeld een cijfer of een beoordeling per criterium. We stemmen dit in de inrichting af op de mogelijkheden van het veld Beoordeling in AFAS."
     },
     {
      "id": "toelichting",
@@ -896,8 +888,7 @@ window.PB_MODULES.push({
       "Ja, eerst zelfstandig",
       "Nee, gezamenlijk na het gesprek"
      ],
-     "a": "Ja, eerst zelfstandig",
-     "at": "Zelfstandig beoordelen voorkomt dat de eerste mening de rest stuurt. Daarna bespreek je de verschillen."
+     "h": "Dit is een werkafspraak. Zelfstandig beoordelen voorkomt dat de eerste mening de rest stuurt; AFAS dwingt dit niet af."
     },
     {
      "id": "termijn",
@@ -956,7 +947,8 @@ window.PB_MODULES.push({
       "Contractvoorstel / aanbod"
      ],
      "at": "Gebruik de standaardsjablonen van AFAS en pas alleen de teksten aan. Zo krijgt elke kandidaat op tijd een reactie.",
-     "link": "Ins_Ess_Rcruit_WF_MessTemp.htm"
+     "link": "OverzichtWerving_en_selectie.htm",
+     "lt": "Standaardinhoud W&S"
     },
     {
      "id": "toon",
@@ -1085,11 +1077,11 @@ window.PB_MODULES.push({
      "t": "choice",
      "l": "Hoe wordt de arbeidsovereenkomst getekend?",
      "o": [
-      "Digitaal via AFAS Pocket",
+      "Digitaal in AFAS (met sms-code)",
       "Ander tekenpakket",
       "Op papier"
      ],
-     "a": "Digitaal via AFAS Pocket",
+     "a": "Digitaal in AFAS (met sms-code)",
      "at": "Eerst tekent de leidinggevende of HR, daarna de medewerker met een sms-code.",
      "link": "131095.htm"
     },
@@ -1134,9 +1126,9 @@ window.PB_MODULES.push({
     {
      "id": "pocket",
      "t": "advies",
-     "l": "Uitnodiging voor AFAS Pocket op de eerste werkdag",
-     "at": "Zet 'Uitnodigen voor AFAS Pocket' aan. De medewerker kan dan vanaf dag één bij loonstroken, verlof en nieuws.",
-     "link": "130526.htm"
+     "l": "Uitnodiging voor AFAS Pocket op de begindatum",
+     "at": "Zet ‘Uitnodigen voor AFAS Pocket’ aan bij het starten van de onboarding. De medewerker kan dan vanaf de begindatum bij loonstroken, verlof en nieuws.",
+     "link": "135040.htm"
     },
     {
      "id": "idcheck",
@@ -1204,7 +1196,7 @@ window.PB_MODULES.push({
      "t": "advies",
      "l": "Standaardrol Werving & selectie",
      "at": "Gebruik de standaard autorisatierol Werving & selectie voor HR en recruiters en voeg alleen toe wat nodig is.",
-     "link": "130428.htm"
+     "link": "102445.htm"
     },
     {
      "id": "zichtlg",
@@ -1255,7 +1247,7 @@ window.PB_MODULES.push({
     {
      "id": "kpi",
      "t": "multi",
-     "l": "Welke cijfers willen jullie volgen?",
+     "l": "Welke cijfers willen jullie kunnen volgen?",
      "o": [
       "Aantal openstaande vacatures",
       "Doorlooptijd tot aanname (time-to-hire)",
@@ -1265,12 +1257,9 @@ window.PB_MODULES.push({
       "Afwijsredenen",
       "Doorlooptijd goedkeuring"
      ],
-     "a": [
-      "Aantal openstaande vacatures",
-      "Doorlooptijd tot aanname (time-to-hire)",
-      "Bron van sollicitanten"
-     ],
-     "at": "Begin met drie cijfers die je echt gebruikt. Breid uit als die op orde zijn."
+     "h": "AFAS levert voor werving en selectie twee standaardrapporten mee. Cijfers als doorlooptijd, bron of conversie per fase vragen een eigen analyse of Power BI.",
+     "link": "OverzichtWerving_en_selectie.htm",
+     "lt": "Standaard in AFAS"
     },
     {
      "id": "ontvanger",
