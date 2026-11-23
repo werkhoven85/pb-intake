@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>AFAS Intake | Proces Bouwers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+
+<header class="top">
+  <div class="top-in">
+    <div class="brand"><small>Proces Bouwers</small><b>AFAS Intake</b></div>
+    <div class="tabs" role="group" aria-label="Weergave">
+      <button id="tab-start" aria-pressed="false">Onderwerpen</button>
+      <button id="tab-form" aria-pressed="true">Formulier</button>
+      <button id="tab-sum" aria-pressed="false">Samenvatting</button>
+    </div>
+    <div class="savestate" id="savestate" aria-live="polite"></div>
+  </div>
+  <div class="overall"><i id="overall"></i></div>
+</header>
+
+<main class="wrap">
+  <section id="view-start" hidden></section>
+  <section id="view-form" hidden>
+    <div class="main">
+      <nav class="nav" id="nav" aria-label="Onderdelen"></nav>
+      <div id="form-body"></div>
+    </div>
+  </section>
+  <section id="view-sum" hidden></section>
+</main>
+
+<div class="toast" id="toast" hidden></div>
+<input type="file" id="importfile" accept=".docx,.json" hidden>
+
+<!-- Vragenlijsten: voeg hier een nieuw bestand toe om een onderwerp toe te voegen -->
+<script src="vragenlijsten/organisatie.js"></script>
+<script src="vragenlijsten/formatie.js"></script>
+<script src="vragenlijsten/werving-selectie.js"></script>
+<script src="vragenlijsten/onboarding.js"></script>
+<script src="vragenlijsten/talent.js"></script>
+<script src="vragenlijsten/verzuim.js"></script>
+<script src="assets/app.js"></script>
+</body>
+</html>
