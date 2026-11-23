@@ -203,7 +203,9 @@ function sectionHtml(s){
     <div class="qs">${s.qs.map(qHtml).join("")}</div>
   </section>`;
 }
+let renderedFor=null;
 function renderForm(){
+  renderedFor=selected.slice().sort().join(",");
   const mods=[ORG,...TOPICS.filter(m=>selected.includes(m.id))].filter(Boolean);
   $("#form-body").innerHTML = `
     <div class="mod-overview">
@@ -478,7 +480,7 @@ function showView(v){
   if(v==="form"&&!selected.length) v="start";
   ["start","form","sum"].forEach(x=>{$("#view-"+x).hidden=x!==v;$("#tab-"+x).setAttribute("aria-pressed",String(x===v))});
   if(v==="start") renderStart();
-  if(v==="form"&&!$("#form-body").innerHTML) renderForm();
+  if((v==="form"||v==="sum")&&renderedFor!==selected.slice().sort().join(",")) renderForm();
   if(v==="sum") renderSummary();
   const h={start:"#start",form:"#formulier",sum:"#samenvatting"}[v]; if(location.hash!==h) history.replaceState(null,"",location.pathname+location.search+h);
 }
@@ -488,7 +490,11 @@ const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){con
 /* ---------- Start ---------- */
 loadLocal();
 const pre=new URLSearchParams(location.search).get("kies");
-if(pre){pre.split(",").forEach(id=>{if(MBY[id]&&!MBY[id].fixed&&!selected.includes(id))selected.push(id)});}
+if(pre){
+  /* Voorselectie uit de link alleen bij een nieuw formulier, en daarna uit het adres halen */
+  if(!selected.length) pre.split(",").forEach(id=>{if(MBY[id]&&!MBY[id].fixed&&!selected.includes(id))selected.push(id)});
+  history.replaceState(null,"",location.pathname+location.hash);
+}
 setSave(meta.saved?"Opgeslagen in deze browser":"Nog niets ingevuld");
 if(selected.length) renderForm();
 const h=location.hash;
