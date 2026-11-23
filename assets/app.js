@@ -480,7 +480,7 @@ function showView(v){
   if(v==="start") renderStart();
   if(v==="form"&&!$("#form-body").innerHTML) renderForm();
   if(v==="sum") renderSummary();
-  const h={start:"#start",form:"#formulier",sum:"#samenvatting"}[v]; if(location.hash!==h) history.replaceState(null,"",h+location.search);
+  const h={start:"#start",form:"#formulier",sum:"#samenvatting"}[v]; if(location.hash!==h) history.replaceState(null,"",location.pathname+location.search+h);
 }
 window.addEventListener("hashchange",()=>showView(location.hash==="#samenvatting"?"sum":location.hash==="#formulier"?"form":"start"));
 const io=new IntersectionObserver(es=>{es.forEach(en=>{if(en.isIntersecting){const k=en.target.id.slice(4);document.querySelectorAll(".nav button").forEach(b=>b.classList.toggle("on",domId(b.dataset.go||"")===k))}})},{rootMargin:"-30% 0px -60% 0px"});
