@@ -30,3 +30,5 @@ Portal met intakevragenlijsten voor het inrichten van AFAS Profit volgens best p
 ## Techniek
 
 Gewone HTML, CSS en JavaScript zonder bouwstap. De Word-export gebruikt de bibliotheek `docx` en het inlezen `JSZip`; beide worden pas geladen als ze nodig zijn.
+
+> Na een wijziging: verhoog het versienummer `?v=` achter de bestanden in `index.html`, zodat browsers de nieuwe versie direct ophalen.
